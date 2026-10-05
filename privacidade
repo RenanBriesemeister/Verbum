@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VERBUM · Política de Privacidade</title>
+<style>
+  :root {
+    --fundo: #f7f0e1;
+    --cartao: #fffaf0;
+    --texto: #3d3427;
+    --secundario: #7a6d5a;
+    --verde: #5a9e3a;
+    --borda: #e6dcc6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+  header { text-align: center; margin-bottom: 28px; }
+  .logo { font-size: 34px; font-weight: 800; letter-spacing: 4px; color: var(--verde); }
+  h1 { font-size: 26px; margin: 4px 0; }
+  .data { color: var(--secundario); font-size: 15px; }
+  section {
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 4px 20px 12px;
+    margin-bottom: 16px;
+  }
+  h2 { font-size: 20px; color: var(--verde); margin: 16px 0 6px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--verde); }
+  .destaque {
+    background: #eef6e6;
+    border-left: 4px solid var(--verde);
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo">VERBUM</div>
+    <h1>Política de Privacidade</h1>
+    <div class="data">Última atualização: 5 de outubro de 2026</div>
+  </header>
+
+  <section>
+    <h2>Quem somos</h2>
+    <p>
+      O <strong>VERBUM</strong> é um jogo de adivinhar palavras em português para Android,
+      desenvolvido por <strong>Renan Briesemeister (Renan Dev Games)</strong>, no Brasil.
+      Esta política explica quais dados o jogo usa, para quê, e como você pode apagá-los,
+      de acordo com a Lei Geral de Proteção de Dados (LGPD).
+    </p>
+    <p class="destaque">
+      Resumo: o jogo funciona sem cadastro. Não pedimos nome, e-mail, telefone ou localização.
+      Só saem do seu celular o <strong>apelido e as pontuações</strong> (se você entrar no ranking
+      online) e os dados usados pelo <strong>Google AdMob</strong> para mostrar anúncios.
+    </p>
+  </section>
+
+  <section>
+    <h2>1. Dados que ficam só no seu celular</h2>
+    <p>Estatísticas, sequência de dias, ranking local, configurações (volume, música) e progresso
+      das dicas ficam salvos apenas no aparelho. Eles não são enviados para nós nem para terceiros
+      e são apagados se você desinstalar o jogo.</p>
+  </section>
+
+  <section>
+    <h2>2. Ranking do dia (opcional)</h2>
+    <p>Se você escolher participar do ranking online, o jogo cria uma <strong>conta anônima</strong>
+      (um identificador aleatório, sem e-mail nem senha) e envia:</p>
+    <ul>
+      <li>o <strong>apelido</strong> que você escolher;</li>
+      <li>a <strong>pontuação</strong> de cada desafio diário, com a data, o nível alcançado e se foi na
+        segunda chance.</li>
+    </ul>
+    <p>O apelido e a pontuação aparecem no ranking para <strong>todos os jogadores</strong>. Por isso,
+      não use seu nome completo ou dados pessoais no apelido.</p>
+    <p>Esses dados ficam guardados no <strong>Supabase</strong> (serviço de banco de dados em nuvem),
+      com conexão criptografada (HTTPS) e regras que impedem que um jogador altere os dados de outro.
+      Eles são usados apenas para montar o ranking e ficam guardados até você pedir a exclusão.</p>
+    <p>Se você não entrar no ranking, nada disso é enviado.</p>
+  </section>
+
+  <section>
+    <h2>3. Anúncios (Google AdMob)</h2>
+    <p>O jogo é gratuito e mostra <strong>anúncios premiados</strong> apenas quando você escolhe
+      assistir (para ganhar a segunda chance ou o nível bônus). Os anúncios são fornecidos pelo
+      <strong>Google AdMob</strong>, que pode coletar e usar:</p>
+    <ul>
+      <li>o <strong>ID de publicidade</strong> do Android;</li>
+      <li>informações do aparelho (modelo, sistema, idioma) e endereço IP aproximado;</li>
+      <li>interações com os anúncios (visualizações e cliques).</li>
+    </ul>
+    <p>O Google usa esses dados para exibir anúncios, medir resultados e evitar fraudes. Os anúncios
+      são limitados à classificação <strong>livre para todos os públicos</strong>.</p>
+    <p>Usuários do Espaço Econômico Europeu, Reino Unido e Suíça veem um pedido de consentimento
+      ao abrir o jogo e podem mudar a escolha em <strong>Opções → Privacidade dos anúncios</strong>.
+      Em qualquer país, você pode redefinir ou desativar o ID de publicidade nas configurações do
+      Android (<em>Configurações → Google → Anúncios</em>).</p>
+    <p>Saiba mais em:
+      <a href="https://policies.google.com/technologies/partner-sites?hl=pt-BR">Como o Google usa
+      dados de sites e apps parceiros</a> e
+      <a href="https://policies.google.com/privacy?hl=pt-BR">Política de Privacidade do Google</a>.</p>
+  </section>
+
+  <section>
+    <h2>4. Compartilhar resultado</h2>
+    <p>A imagem do resultado é criada no próprio celular e só é enviada para o app que você escolher
+      (WhatsApp, Instagram etc.). Não recebemos uma cópia.</p>
+  </section>
+
+  <section id="excluir">
+    <h2>5. Como apagar seus dados</h2>
+    <ul>
+      <li><strong>Pelo jogo:</strong> abra <strong>Opções → Apagar meus dados online</strong> e toque
+        duas vezes. A conta anônima, o apelido e todas as pontuações são apagados do servidor na hora.</li>
+      <li><strong>Por e-mail:</strong> se não tiver mais o jogo instalado, escreva para
+        <a href="mailto:renandevgames@gmail.com">renandevgames@gmail.com</a> informando o seu apelido.
+        Apagamos os dados em até 15 dias.</li>
+      <li><strong>Dados locais:</strong> são apagados ao desinstalar o jogo (ou em
+        Opções → Apagar estatísticas).</li>
+    </ul>
+    <p>Não guardamos cópias depois da exclusão.</p>
+  </section>
+
+  <section>
+    <h2>6. Crianças</h2>
+    <p>O VERBUM é destinado a maiores de 13 anos. Não coletamos intencionalmente dados pessoais de
+      crianças. Se você é responsável por uma criança que entrou no ranking, peça a exclusão pelo
+      e-mail abaixo.</p>
+  </section>
+
+  <section>
+    <h2>7. Seus direitos</h2>
+    <p>Pela LGPD, você pode pedir acesso, correção ou exclusão dos seus dados e tirar dúvidas sobre
+      o tratamento deles. O apelido pode ser trocado a qualquer momento em
+      <strong>Opções → Apelido</strong>.</p>
+  </section>
+
+  <section>
+    <h2>8. Mudanças nesta política</h2>
+    <p>Se esta política mudar, a nova versão será publicada nesta página com a data atualizada.</p>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p>Renan Briesemeister (Renan Dev Games)<br>
+      E-mail: <a href="mailto:renandevgames@gmail.com">renandevgames@gmail.com</a></p>
+  </section>
+</main>
+</body>
+</html>
