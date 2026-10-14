@@ -53,7 +53,7 @@
   <header>
     <div class="logo">VERBUM</div>
     <h1>Política de Privacidade</h1>
-    <div class="data">Última atualização: 5 de outubro de 2026</div>
+    <div class="data">Última atualização: 14 de outubro de 2026</div>
   </header>
 
   <section>
@@ -66,29 +66,51 @@
     </p>
     <p class="destaque">
       Resumo: o jogo funciona sem cadastro. Não pedimos nome, e-mail, telefone ou localização.
-      Só saem do seu celular o <strong>apelido e as pontuações</strong> (se você entrar no ranking
-      online) e os dados usados pelo <strong>Google AdMob</strong> para mostrar anúncios.
+      Saem do seu celular: um <strong>código aleatório do aparelho</strong> (para contar quantas
+      pessoas jogam por dia), o <strong>apelido e as pontuações</strong> (se você entrar no ranking
+      online), o <strong>progresso salvo na nuvem do Play Games</strong> (se você usar o Play Games)
+      e os dados usados pelo <strong>Google AdMob</strong> para mostrar anúncios.
     </p>
   </section>
 
   <section>
-    <h2>1. Dados que ficam só no seu celular</h2>
-    <p>Estatísticas, sequência de dias, ranking local, configurações (volume, música) e progresso
-      das dicas ficam salvos apenas no aparelho. Eles não são enviados para nós nem para terceiros
-      e são apagados se você desinstalar o jogo.</p>
+    <h2>1. Dados que ficam no seu celular</h2>
+    <p>Estatísticas, sequência de dias, nível e XP, palavras do Dicionário, ranking local,
+      configurações (volume, música, tema, lembrete) e progresso das dicas ficam salvos no aparelho.
+      Eles não são enviados para nós e são apagados se você desinstalar o jogo. Se você usar o
+      Play Games, uma cópia deles fica na sua nuvem do Google (veja o item 4).</p>
+    <p>O <strong>lembrete diário</strong> é uma notificação criada no próprio celular. Ele só é
+      ligado se você aceitar, e pode ser desligado em <strong>Opções</strong>.</p>
   </section>
 
   <section>
-    <h2>2. Ranking do dia (opcional)</h2>
+    <h2>2. Contador de acessos</h2>
+    <p>Na primeira vez que o jogo é aberto, ele cria um <strong>código aleatório</strong> para o
+      aparelho. Esse código não é o seu nome, e-mail, ID de publicidade nem ID do Google, e não é
+      ligado ao seu apelido. Com ele, o jogo avisa ao nosso servidor:</p>
+    <ul>
+      <li>que o jogo foi aberto naquele dia, e em qual versão;</li>
+      <li>se o lembrete diário está ligado ou desligado, e quando o jogo foi aberto pelo lembrete.</li>
+    </ul>
+    <p>Usamos isso só para saber quantas pessoas jogam por dia e se o lembrete é útil. Fica guardado
+      no mesmo servidor do ranking (Supabase, item 3), e ninguém de fora consegue ler.</p>
+  </section>
+
+  <section>
+    <h2>3. Ranking do dia (opcional)</h2>
     <p>Se você escolher participar do ranking online, o jogo cria uma <strong>conta anônima</strong>
       (um identificador aleatório, sem e-mail nem senha) e envia:</p>
     <ul>
-      <li>o <strong>apelido</strong> que você escolher;</li>
-      <li>a <strong>pontuação</strong> de cada desafio diário, com a data, o nível alcançado e se foi na
-        segunda chance.</li>
+      <li>o <strong>apelido</strong> que você escolher, a <strong>moldura</strong> escolhida e o seu
+        <strong>nível</strong> no jogo;</li>
+      <li>a <strong>pontuação</strong> de cada desafio, com a data, o modo, as palavras ou níveis
+        alcançados, onde as vidas foram perdidas e se foi na segunda chance;</li>
+      <li>um <strong>código de recuperação</strong>: o servidor guarda só um resumo cifrado dele
+        (que não permite descobrir o código). Ele serve para levar o seu apelido para um celular
+        novo (veja o item 4).</li>
     </ul>
-    <p>O apelido e a pontuação aparecem no ranking para <strong>todos os jogadores</strong>. Por isso,
-      não use seu nome completo ou dados pessoais no apelido.</p>
+    <p>O apelido, a moldura, o nível e a pontuação aparecem no ranking para <strong>todos os
+      jogadores</strong>. Por isso, não use seu nome completo ou dados pessoais no apelido.</p>
     <p>Esses dados ficam guardados no <strong>Supabase</strong> (serviço de banco de dados em nuvem),
       com conexão criptografada (HTTPS) e regras que impedem que um jogador altere os dados de outro.
       Eles são usados apenas para montar o ranking e ficam guardados até você pedir a exclusão.</p>
@@ -96,9 +118,24 @@
   </section>
 
   <section>
-    <h2>3. Anúncios (Google AdMob)</h2>
+    <h2>4. Play Games e progresso na nuvem (opcional)</h2>
+    <p>Se você tiver um perfil no <strong>Google Play Games</strong>, o jogo entra nele sozinho ao
+      abrir. Isso não é obrigatório: sem ele, o jogo funciona normalmente, só sem a nuvem. Ao entrar,
+      o Google informa ao jogo o seu <strong>ID de jogador</strong> e o seu <strong>nome de jogador
+      do Play Games</strong>. O jogo usa isso só para encontrar o seu progresso salvo, e não envia
+      esses dados para o nosso servidor.</p>
+    <p>O jogo guarda uma cópia do seu progresso nos <strong>jogos salvos do Play Games</strong>, que
+      ficam na sua conta do Google e que só o VERBUM consegue ler: estatísticas, nível e XP,
+      Dicionário, configurações, moldura e o código de recuperação do ranking. Assim, ao instalar o
+      jogo em outro celular, o progresso e o apelido voltam. Nós não temos acesso a essa cópia.</p>
+    <p>Esses dados são tratados pelo Google conforme a
+      <a href="https://policies.google.com/privacy?hl=pt-BR">Política de Privacidade do Google</a>.</p>
+  </section>
+
+  <section>
+    <h2>5. Anúncios (Google AdMob)</h2>
     <p>O jogo é gratuito e mostra <strong>anúncios premiados</strong> apenas quando você escolhe
-      assistir (para ganhar a segunda chance ou o nível bônus). Os anúncios são fornecidos pelo
+      assistir (para ganhar a segunda chance ou uma vida extra). Os anúncios são fornecidos pelo
       <strong>Google AdMob</strong>, que pode coletar e usar:</p>
     <ul>
       <li>o <strong>ID de publicidade</strong> do Android;</li>
@@ -118,19 +155,24 @@
   </section>
 
   <section>
-    <h2>4. Compartilhar resultado</h2>
+    <h2>6. Compartilhar resultado</h2>
     <p>A imagem do resultado é criada no próprio celular e só é enviada para o app que você escolher
       (WhatsApp, Instagram etc.). Não recebemos uma cópia.</p>
   </section>
 
   <section id="excluir">
-    <h2>5. Como apagar seus dados</h2>
+    <h2>7. Como apagar seus dados</h2>
     <ul>
       <li><strong>Pelo jogo:</strong> abra <strong>Opções → Apagar meus dados online</strong> e toque
-        duas vezes. A conta anônima, o apelido e todas as pontuações são apagados do servidor na hora.</li>
+        duas vezes. A conta anônima, o apelido, o código de recuperação e todas as pontuações são
+        apagados do servidor na hora.</li>
       <li><strong>Por e-mail:</strong> se não tiver mais o jogo instalado, escreva para
         <a href="mailto:renandevgames@gmail.com">renandevgames@gmail.com</a> informando o seu apelido.
-        Apagamos os dados em até 15 dias.</li>
+        Apagamos os dados em até 15 dias. Os registros do contador de acessos não são ligados a
+        você nem ao seu apelido, então não é possível identificar quais são seus.</li>
+      <li><strong>Progresso na nuvem:</strong> pode ser apagado no seu
+        <a href="https://play.google.com/games/profile">perfil do Play Games</a> (dados de cada jogo)
+        ou na sua <a href="https://myaccount.google.com">Conta do Google</a>.</li>
       <li><strong>Dados locais:</strong> são apagados ao desinstalar o jogo (ou em
         Opções → Apagar estatísticas).</li>
     </ul>
@@ -138,21 +180,21 @@
   </section>
 
   <section>
-    <h2>6. Crianças</h2>
+    <h2>8. Crianças</h2>
     <p>O VERBUM é destinado a maiores de 13 anos. Não coletamos intencionalmente dados pessoais de
       crianças. Se você é responsável por uma criança que entrou no ranking, peça a exclusão pelo
       e-mail abaixo.</p>
   </section>
 
   <section>
-    <h2>7. Seus direitos</h2>
+    <h2>9. Seus direitos</h2>
     <p>Pela LGPD, você pode pedir acesso, correção ou exclusão dos seus dados e tirar dúvidas sobre
       o tratamento deles. O apelido pode ser trocado a qualquer momento em
       <strong>Opções → Apelido</strong>.</p>
   </section>
 
   <section>
-    <h2>8. Mudanças nesta política</h2>
+    <h2>10. Mudanças nesta política</h2>
     <p>Se esta política mudar, a nova versão será publicada nesta página com a data atualizada.</p>
   </section>
 
